@@ -1,0 +1,31 @@
+POST http://localhost:3333/events HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": 123,
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/1685809d-ac78-4ca3-889d-1921216c0055/attendees
+Content-Type: application/json
+
+{
+  "name": "Silas Hikaru",
+  "email": "silas5@gmail.com.br"
+}
+
+###
+
+GET http://localhost:3333/events/1685809d-ac78-4ca3-889d-1921216c0055
+
+###
+GET http://localhost:3333/attendees/3/badge
+
+###
+GET http://localhost:3333/attendees/6/check-in 
+
+###
+GET http://localhost:3333/events/1685809d-ac78-4ca3-889d-1921216c0055/attendees?query=silas
